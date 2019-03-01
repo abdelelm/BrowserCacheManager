@@ -1,6 +1,6 @@
 {
   "name": "browsercachemanager",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Manage cacheStorage , localStorage , sessionStorage for browser",
   "main": "./dist/storageManager.min.js",
   "private" : false,
