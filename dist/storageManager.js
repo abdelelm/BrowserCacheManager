@@ -1,6 +1,4 @@
-(function webpackUniversalModuleDefinition(root, factory) { 
-  // iam hacking you ahahahah
-  // plopsa
+(function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
@@ -479,7 +477,7 @@ function () {
     key: "parseResponse",
     value: function parseResponse(resp, type) {
       return new Promise(function (res) {
-        if (!resp) return resp;
+        if (!resp) return res(resp);
         var parsedResp;
 
         try {
