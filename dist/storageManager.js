@@ -174,10 +174,14 @@ function () {
     key: "clear",
     value: function clear(name) {
       return caches.keys().then(function (cacheNames) {
+        var _this3 = this;
+
         return Promise.all(cacheNames.map(function (cacheName) {
           if (!name || cacheName === name) return caches.delete(cacheName);else return Promise.resolve();
         })).then(function (x) {
-          return undefined;
+          _this3.init();
+
+          return x;
         });
       });
     }
@@ -233,55 +237,55 @@ function () {
   }, {
     key: "getItems",
     value: function getItems() {
-      var _this3 = this;
+      var _this4 = this;
 
       return new Promise(function (res) {
-        return res(Object.assign({}, _this3.storage));
+        return res(Object.assign({}, _this4.storage));
       });
     }
   }, {
     key: "clear",
     value: function clear() {
-      var _this4 = this;
+      var _this5 = this;
 
       return new Promise(function (res) {
-        res(_this4.storage.clear());
+        res(_this5.storage.clear());
       });
     }
   }, {
     key: "getItem",
     value: function getItem(name) {
-      var _this5 = this;
+      var _this6 = this;
 
       return new Promise(function (res) {
-        res(_this5.storage.getItem(_this5.getItemName(name)));
+        res(_this6.storage.getItem(_this6.getItemName(name)));
       });
     }
   }, {
     key: "key",
     value: function key(k) {
-      var _this6 = this;
+      var _this7 = this;
 
       return new Promise(function (res) {
-        res(_this6.storage.key(k));
+        res(_this7.storage.key(k));
       });
     }
   }, {
     key: "removeItem",
     value: function removeItem(name) {
-      var _this7 = this;
+      var _this8 = this;
 
       return new Promise(function (res) {
-        res(_this7.storage.removeItem(_this7.getItemName(name)));
+        res(_this8.storage.removeItem(_this8.getItemName(name)));
       });
     }
   }, {
     key: "setItem",
     value: function setItem(name, value) {
-      var _this8 = this;
+      var _this9 = this;
 
       return new Promise(function (res) {
-        res(_this8.storage.setItem(_this8.getItemName(name), value));
+        res(_this9.storage.setItem(_this9.getItemName(name), value));
       });
     }
   }, {
@@ -315,64 +319,64 @@ function () {
   }, {
     key: "getItems",
     value: function getItems() {
-      var _this9 = this;
+      var _this10 = this;
 
       return new Promise(function (res) {
-        return res(Object.assign({}, _this9.storage));
+        return res(Object.assign({}, _this10.storage));
       });
     }
   }, {
     key: "clear",
     value: function clear() {
-      var _this10 = this;
+      var _this11 = this;
 
       return new Promise(function (res) {
-        res(_this10.storage.clear());
+        res(_this11.storage.clear());
       });
     }
   }, {
     key: "getItem",
     value: function getItem(name) {
-      var _this11 = this;
+      var _this12 = this;
 
       return new Promise(function (res) {
-        res(_this11.storage.getItem(_this11.getItemName(name)));
+        res(_this12.storage.getItem(_this12.getItemName(name)));
       });
     }
   }, {
     key: "key",
     value: function key(k) {
-      var _this12 = this;
+      var _this13 = this;
 
       return new Promise(function (res) {
-        res(_this12.storage.key(k));
+        res(_this13.storage.key(k));
       });
     }
   }, {
     key: "removeItem",
     value: function removeItem(name) {
-      var _this13 = this;
+      var _this14 = this;
 
       return new Promise(function (res) {
-        res(_this13.storage.removeItem(_this13.getItemName(name)));
+        res(_this14.storage.removeItem(_this14.getItemName(name)));
       });
     }
   }, {
     key: "setItem",
     value: function setItem(name, value) {
-      var _this14 = this;
+      var _this15 = this;
 
       return new Promise(function (res) {
-        res(_this14.storage.setItem(_this14.getItemName(name), value));
+        res(_this15.storage.setItem(_this15.getItemName(name), value));
       });
     }
   }, {
     key: "length",
     get: function get() {
-      var _this15 = this;
+      var _this16 = this;
 
       return new Promise(function (res) {
-        return res(_this15.storage.length);
+        return res(_this16.storage.length);
       });
     }
   }]);
