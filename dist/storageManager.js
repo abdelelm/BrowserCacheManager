@@ -173,9 +173,9 @@ function () {
   }, {
     key: "clear",
     value: function clear(name) {
-      return caches.keys().then(function (cacheNames) {
-        var _this3 = this;
+      var _this3 = this;
 
+      return caches.keys().then(function (cacheNames) {
         return Promise.all(cacheNames.map(function (cacheName) {
           if (!name || cacheName === name) return caches.delete(cacheName);else return Promise.resolve();
         })).then(function (x) {
