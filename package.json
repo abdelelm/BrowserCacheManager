@@ -1,9 +1,9 @@
 {
   "name": "browsercachemanager",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Manage cacheStorage , localStorage , sessionStorage for browser",
   "main": "./dist/storageManager.min.js",
-  "private" : false,
+  "private": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/abdelelm/BrowserCacheManager"
